@@ -1,14 +1,30 @@
 new Vue({
-  el: "#app",
+  el: '#app',
   data: {
-    title: 'this is a title.',
-    link: 'http://bummings.io',
-    finished: '<h1><a href="http://fauxkno.com">Faux</a></h1>'
+    counter: 0
   },
   methods: {
-    sayTitle: function () {
-      this.title = 'nah';
-      return this.title;
+    increase: function(step) {
+      this.counter += step;
     }
   }
 });
+
+
+
+
+// new Vue({
+//   el: '#app',
+//   data: {
+//     x: 0,
+//     y: 0,
+//     z: 'bruh'
+//   },
+//   methods: {
+//     updateCoordinates: function(event) {
+//       this.x = event.clientX;
+//       this.y = event.clientY;
+//       this.z = "say bruh"
+//     }
+//   }
+// })
