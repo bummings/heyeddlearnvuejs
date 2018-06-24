@@ -1,30 +1,24 @@
 new Vue({
   el: '#app',
   data: {
-    counter: 0
+    counter: 0,
+    x: 0,
+    y: 0,
+    z: 'bruh',
   },
   methods: {
+    updateCoordinates: function(event) {
+      this.x = event.clientX;
+      this.y = event.clientY;
+      this.z = "bruh!"
+    },
+ 
     increase: function(step) {
       this.counter += step;
+    },
+
+    alertMe: function() {
+      alert('yo cuz');
     }
   }
 });
-
-
-
-
-// new Vue({
-//   el: '#app',
-//   data: {
-//     x: 0,
-//     y: 0,
-//     z: 'bruh'
-//   },
-//   methods: {
-//     updateCoordinates: function(event) {
-//       this.x = event.clientX;
-//       this.y = event.clientY;
-//       this.z = "say bruh"
-//     }
-//   }
-// })

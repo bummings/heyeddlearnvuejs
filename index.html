@@ -11,16 +11,20 @@
 </head>
 
 <body>
-  <style></style>
-
-  <!-- <div id="app">
-    <h1 v-on:mousemove='updateCoordinates'>Coords:   {{x }} / {{ y }} / {{ z }} </h1>
-  </div> -->
 
   <div id="app">
-      <button v-on:click='increase'>CLICK DAT</button>
-      <p> {{ counter }} </p>
-    </div>
+        <button v-on:click='increase(19)'>CLICK DAT</button>
+        <h1> {{ counter }} </h1>
+    
+
+
+    <h1 v-on:mousemove='updateCoordinates'>Coords:   {{x }} / {{ y }} / {{ z }}
+    <span class='shhh' v-on:mousemove.stop=''>Shhh</span> </h1>
+
+      <input type="text" v-on:keyup.enter='alertMe'>
+
+
+  </div>
 
 
   <script src="vue.js"></script>

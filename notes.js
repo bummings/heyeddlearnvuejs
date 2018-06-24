@@ -101,8 +101,142 @@ new Vue({
   methods: {
     increase: function() {
       this.counter++;
-
     }
   }
 });
+
+// We are using the v-on:click directive to employ the INCREASE
+// method, and thus displaying the counter total in real time
+
+
+// USING EVENT DATA FROM THE EVENT OBJECT
+// using X and Y coordinates, for example
+
+// HTML *x and y are connected to the event object, z is static
+  <div id="app">
+    <h1 v-on:mousemove='updateCoordinates'>Coords:   {{x }} / {{ y }} / {{ z }} </h1>
+  </div>
+
+//JS
+new Vue({
+  el: '#app',
+  data: {
+    x: 0,
+    y: 0,
+    z: 'bruh'
+  },
+  methods: {
+    updateCoordinates: function(event) {
+      this.x = event.clientX;
+      this.y = event.clientY;
+      this.z = "say bruh"
+    }
+  }
+});
+
+// the clientX, clientY props are event object props and the X, Y variables
+// are hooked up to those in the Vue method definitions- Z is updated, but not
+// yknow, dynamically or anything- it's just reassigned in the methods defs.
+
+// PASSING YOUR OWN ARGUMENTS 
+// with the counter, for example:
+
+new Vue({
+  el: '#app',
+  data: {
+    counter: 0
+  },
+  methods: {
+    increase: function(step) {
+      this.counter += step;
+    }
+  }
+});
+
+// so in the HTML we specify the argument that's passed into
+// this function, in this particular the steps that are added
+
+// HTML
+<div id="app">
+    <button v-on:click='increase(19)'>CLICK DAT</button>
+    <p> {{ counter }} </p>
+</div>
+
+// and thus we're met with an argument of 19 which will pass into the
+// function defined in our methods and blah blah blah yes edd we get it
+
+
+
+// STOP PROPAGATION: what is it, why use it, who is this man 
+// cooking eggs in my kitchen
+
+// using the coordinates demo, we'll create a 'dead zone' that will mark a
+// span element as none coordinate'd, or something
+
+//HTML
+<div id="app">
+  <h1 v-on:mousemove='updateCoordinates'>Coords:   {{x }} / {{ y }}     
+  <span class='shhh' v-on:mousemove='nah'>Shhh</span> </h1> 
+</div>
+
+
+//JS
+new Vue({
+  el: '#app',
+  data: {
+    x: 0,
+    y: 0,
+    z: 'bruh'
+  },
+  methods: {
+    updateCoordinates: function(event) {
+      this.x = event.clientX;
+      this.y = event.clientY;
+      this.z = "bruh!!"
+    },
+    nah: function(event) {
+      event.stopPropagation();
+    }
+  }
+});
+
+// you possess now two methods with two very different functions.
+// method one, updateCoordinates, will- yknow- update the damn coordinates.
+// method two, nah, will halt that event from propagating
+
+// this is well and good and all but yo
+// instead of creating a whole 'nother method to stop that propagation, you
+// can just use a MODIFIER on the mthrfkn EVENT, dawg
+
+//thus
+<div id="app">
+  <h1 v-on:mousemove='updateCoordinates'>Coords:   {{x }} / {{ y }}     
+  <span class='shhh' v-on:mousemove.stop=''>Shhh</span> </h1> 
+</div>
+
+
+// KEY EVENTS + KEY MODIFIERS, ah
+
+//HTML
+<div id="app">
+  <input type="text" v-on:keyup.enter='alertMe'>
+</div>
+
+//JS
+new Vue({
+  el: '#app',
+  data: {
+    //dude whatever
+  },
+  methods: {
+    alertMe: function() {
+      alert('yo cuz');
+    }
+  }
+});
+
+// using the modifiers like .enter or .space we can identify specific 
+// keys to trigger an event, like this really annoying alert
+
+
 

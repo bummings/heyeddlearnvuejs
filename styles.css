@@ -1,4 +1,30 @@
+html {
+  margin: 100px;
+}
+
 h1 {
   font-family: Bebas Neue;
-  font-size: 200px;
+  font-size: 80px;
+}
+
+p {
+  font-family: Bebas Neue;
+  font-size: 145px;
+}
+
+button {
+  background-color: #b4da55;
+  font-size: 100px;
+  box-shadow: 8px 8px;
+}
+
+.shhh {
+  background-color: #222;
+  color: #fffeff;
+  font-family: Bebas Neue;
+  font-size: 150px;
+}
+
+input {
+  font-size: 60px;
 }
