@@ -43,3 +43,20 @@ input {
   color: #b4da55;
   text-align: center;
 }
+
+.boxes {
+  display: flex;
+}
+
+.demo {
+  width: 100px;
+  height: 100px;
+  background-color: #b4da55;
+  display: inline-block;
+  margin: 10px;
+  margin-right: 40px;
+}
+
+.red {
+  background-color: darkred;
+}

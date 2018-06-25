@@ -7,7 +7,8 @@ new Vue({
     x: 0,
     y: 0,
     z: 'bruh',
-    name: 'faux'
+    name: 'faux',
+    turnRed: false
   },
 
   computed: {

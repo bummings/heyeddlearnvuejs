@@ -19,7 +19,6 @@
     <p class='greaterLesser'> {{ output }} </p>
 
 
-
     <h1 v-on:mousemove='updateCoordinates'>Coords: {{x }} / {{ y }} / {{ z }}
       <span class='shhh' v-on:mousemove.stop=''>Shhh</span>
     </h1>
@@ -36,7 +35,24 @@
 
 
 
-  </div>
+
+    <div class="boxes">
+
+      <div 
+        class="demo" 
+        @click="turnRed = !turnRed" 
+        :class="{red: turnRed}">
+      </div>
+
+      <div class="demo"></div>
+      <div class="demo"></div>
+      <h1>How bout a clik</h1>
+    </div>
+
+
+
+
+  </div>   <!-- app div you fool-->
 
 
   <script src="vue.js"></script>
