@@ -13,18 +13,28 @@
 <body>
 
   <div id="app">
-        <button v-on:click='increase(((Math.random()*10)))'>CLICK DAT</button>
-        <h1> {{ counter }} </h1>
-    
+    <button v-on:click='increase(((Math.random()*10)))'>CLICK DAT ++</button>
+    <button v-on:click='decrease(((Math.random()*10)))'>CLICK DAT --</button>
+    <h1> {{ counter }} </h1>
+    <p class='greaterLesser'> {{ output }} </p>
 
 
-    <h1 v-on:mousemove='updateCoordinates'>Coords:   {{x }} / {{ y }} / {{ z }}
-    <span class='shhh' v-on:mousemove.stop=''>Shhh</span> </h1>
 
-    <input type="text" v-on:keyup.enter='alertMe'>
+    <h1 v-on:mousemove='updateCoordinates'>Coords: {{x }} / {{ y }} / {{ z }}
+      <span class='shhh' v-on:mousemove.stop=''>Shhh</span>
+    </h1>
 
-    <input type="text" v-model="name">
-    <h1 class="name"> {{ name }} </h1>
+
+    <div class="keyup">
+      <input type="text" placeholder="keylistenin events" v-on:keyup.enter='alertMe'>
+    </div>
+
+    <div class="textUpdate">
+      <input type="text" placeholder="name" v-model="name">
+      <h1 class="name"> {{ name }} </h1>
+    </div>
+
+
 
   </div>
 

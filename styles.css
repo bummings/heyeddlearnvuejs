@@ -9,13 +9,14 @@ h1 {
 
 p {
   font-family: Bebas Neue;
-  font-size: 145px;
+  font-size: 45px;
 }
 
 button {
   background-color: #b4da55;
-  font-size: 100px;
+  font-size: 45px;
   box-shadow: 8px 8px;
+  margin-right: 50px;
 }
 
 .shhh {
@@ -31,4 +32,14 @@ input {
 
 .name {
   color: #b4da55;
+}
+
+.textUpdate {
+  margin: 40px 0;
+}
+
+.greaterLesser {
+  background-color: black;
+  color: #b4da55;
+  text-align: center;
 }

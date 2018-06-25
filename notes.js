@@ -245,7 +245,43 @@ new Vue({
 // in which we are pushing data in and not just just retrieving it from
 // abitrary variables in the app.js file
 
+// this is a input form which will modify the page's h1
+
+//HTML
 <div id="app">
   <input type="text" v-model:'name'>
+  <p> {{ name }} </p>
 </div>
+
+
+//JS 
+new Vue ({
+  el: '#app',
+  data: {
+    name: 'Faux'
+  }
+});
+
+
+// COMPUTED VALUES
+// in the interest of efficiency, computed values are cool because they only
+// update when they *have* to and are not endlessly evaluated: they ain't measured
+// over and over and over and over again because the value is CACHED until it
+// changes, dawg- using the a function as defind in the Vue's methods will evaluate 
+// the prop every single time a property is changed and the page refreshes, such as 
+// when a button is clicked and a counter is incremented / decremented on a page 
+// element like an h1 or a div, &c. 
+
+// ALSO WORTH NOTING that when referencing the computed value you're only refering
+// to it by just the name and not with parentheses like you were calling, yknow, 
+// a goddamn function
+
+
+// SHORTHAND for directives
+
+// v-on:click can be replaced with @, thus:
+
+<button v-on:click='changeLink'>bruh change that link</button>
+<button @click='changeLink'>bruh right now change it</button>
+
 
