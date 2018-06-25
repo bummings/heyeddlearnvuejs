@@ -240,3 +240,12 @@ new Vue({
 
 
 
+
+// WHOA TWO WAY DATA BINDING
+// in which we are pushing data in and not just just retrieving it from
+// abitrary variables in the app.js file
+
+<div id="app">
+  <input type="text" v-model:'name'>
+</div>
+
