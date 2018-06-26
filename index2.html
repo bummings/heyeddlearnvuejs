@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+  <div id="app">
+
+    <div class="showBox">
+      <p>check dis out</p>
+      <p v-if='show'>using vuejs bruh!</p>
+      <p v-else>oh shit check me out</p>
+
+      <template v-if="show">
+          <h1>bruh</h1>
+          <p>both these tags in a template element</p>
+      </template>
+
+    </div>
+    
+  <div class="buttonBox">
+    <button @click='show = !show'>SWITCH</button>
+  </div>
+    
+
+  </div>
+
+  <script src='vue.js'></script>
+  <script src='app2.js'></script>
+</body>
+</html>

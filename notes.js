@@ -270,7 +270,7 @@ new Vue ({
 // changes, dawg- using the a function as defind in the Vue's methods will evaluate 
 // the prop every single time a property is changed and the page refreshes, such as 
 // when a button is clicked and a counter is incremented / decremented on a page 
-// element like an h1 or a div, &c. 
+// element like an h1 or a div, &c.    ALSO, all computed properties are functions
 
 // ALSO WORTH NOTING that when referencing the computed value you're only refering
 // to it by just the name and not with parentheses like you were calling, yknow, 
@@ -283,5 +283,11 @@ new Vue ({
 
 <button v-on:click='changeLink'>bruh change that link</button>
 <button @click='changeLink'>bruh right now change it</button>
+
+// v-bind can be replaced with just a simple colon-
+<button v-bind:href='url'>click dis one bruh</button>
+<button :href='url'>click dis one bruh</button>
+
+
 
 

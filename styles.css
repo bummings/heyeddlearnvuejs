@@ -5,11 +5,13 @@ html {
 h1 {
   font-family: Bebas Neue;
   font-size: 80px;
+  line-height: 1;
 }
 
 p {
   font-family: Bebas Neue;
   font-size: 45px;
+  line-height: .3;
 }
 
 button {
@@ -59,4 +61,9 @@ input {
 
 .red {
   background-color: darkred;
+}
+
+.showBox {
+  height: 400px;
+  width: 100%;
 }
